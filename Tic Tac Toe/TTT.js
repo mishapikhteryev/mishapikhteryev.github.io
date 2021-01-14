@@ -339,7 +339,7 @@ function computerTakeTurn(){
 			}
 		}
 		
-		// if computer goes second, and the player takes the center, the computer should take a corner piece.
+		// if the computer goes second, and the player takes the center, the computer should take a corner piece.
 		if (board[5] == "X") {
 			let rand = Math.floor(Math.random()*4);
 			if (rand == 0 && board[1] == ""){
