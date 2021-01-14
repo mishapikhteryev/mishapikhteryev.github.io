@@ -175,7 +175,7 @@ function computerTakeTurn(){
 		} while(true);
 	}else{
 		// The Hard Computer
-		// Find where there are two O's in a row and moving there to win.
+		// Find where there are two O's in a row and move there to win.
 		if(board[1] == "" && ((board[2] == "O" && board[3] == "O") || (board[5] == "O" && board[9] == "O") || (board[4] == "O" && board[7] == "O"))) {
 			document.getElementById("one").innerHTML = currentPlayer;
 			return;
@@ -213,7 +213,7 @@ function computerTakeTurn(){
 			return;
 		}
 		
-		// Find where there are two X's in a row and moving there to not lose.
+		// Find where there are two X's in a row and move there to not lose.
 		if(board[1] == "" && ((board[2] == "X" && board[3] == "X") || (board[5] == "X" && board[9] == "X") || (board[4] == "X" && board[7] == "X"))) {
 			document.getElementById("one").innerHTML = currentPlayer;
 			return;
@@ -259,7 +259,7 @@ function computerTakeTurn(){
 			return;
 		}
 		
-		// If computer goes first and the player takes an edge move, victory is guarenteed.
+		// If the computer goes first and the player takes an edge move, victory is guaranteed.
 		// take a corner piece roughly opposite the "X", then victory is forced.
 		if (board[5] == "O" && (board[2] == "X" || board[4] == "X" || board[6] == "X" || board[8] == "X")) {
 			let rand = Math.floor(Math.random()*2);
@@ -281,7 +281,7 @@ function computerTakeTurn(){
 			}
 		}
 		
-		// If computer goes first and the player takes a corner move, victory is likely.
+		// If the computer goes first and the player takes a corner move, victory is likely.
 		// take a corner piece opposite the "X", these will give the computer the best chances.
 		if (board[5] == "O" && (board[1] == "X" || board[3] == "X" || board[7] == "X" || board[9] == "X")) {
 			if (board[1] == "X" && board[9] == ""){
@@ -303,7 +303,7 @@ function computerTakeTurn(){
 		}
 		
 		// If after the computer goes first and the player takes a corner move, and the player takes an edge move.
-		// take a corner piece opposite the new edge piece, or block, and victory is guarenteed.
+		// take a corner piece opposite the new edge piece, or block, and victory is guaranteed.
 		if (board[5] == "O" && (board[1] == "X" || board[3] == "X" || board[7] == "X" || board[9] == "X")) {
 			if (board[1] == "X" && board[9] == "O" && board[6] == "X" && board[7] == ""){
 				document.getElementById("seven").innerHTML = currentPlayer;
@@ -360,7 +360,7 @@ function computerTakeTurn(){
 			}
 		}
 		
-		// take another corner piece the turn after if the player takes the corner piece opposite the computers latest turn, making a line.
+		// take another corner piece the turn after if the player takes the corner piece opposite the computer's latest turn, making a line.
 		if (board[5] == "X" && ((board[1] == "O" && board[9] == "X") || (board[3] == "O" && board[7] == "X") || (board[7] == "O" && board[3] == "X") || (board[9] == "O" && board[1] == "X"))) {
 			let rand = Math.floor(Math.random()*2);
 			if (board[1] == "X" && board[3] == "" && board[7] == ""){
@@ -393,6 +393,7 @@ function computerTakeTurn(){
 		} while(true);
 	}
 }// computerTakeTurn
+
 
 // unhides the controls window to prevent the player
 // from inputting another character by clicking too fast
