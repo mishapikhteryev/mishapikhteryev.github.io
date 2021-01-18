@@ -1,0 +1,172 @@
+body {
+	position:relative;
+	color:white;
+	background-color:black;
+	padding:0px;
+	margin:0px;
+	font-family:"Courier New";
+}
+
+#header {
+	display:inline-block;
+	position:relative;
+	width:100%;
+	height:10vh;
+	background-color:black;
+	border:0px;
+	padding:0px;
+	margin:0px;
+	border-bottom:solid white;
+}
+
+#gameboard {
+	position:relative;
+	width:100%;
+	height:85vh;
+	margin:0px;
+	background-color:black;
+	border-bottom:solid white;
+}
+
+#title {
+	text-align:center;
+}
+
+#header h2 {
+	position:absolute;
+	bottom:0px;
+	margin-bottom:2px;
+}
+
+#header #left {
+	left:20px;
+}
+
+#header #middle {
+	text-align:center;
+	width:100%;
+}
+
+#header #right {
+	right:20px;
+}
+
+.paddle {
+	width:15px;
+	height:150px;
+	background-color:white;
+}
+
+#paddle1 {
+	position:absolute;
+	left:30px;
+	top:400px;
+}
+
+#paddle2 {
+	position:absolute;
+	right:30px;
+	top:400px;
+}
+
+#ball {
+	position:absolute;
+	left:50%;
+	top:50%;
+	width:30px;
+	height:30px;
+	background-color:white;
+	border-radius:50%;
+}
+
+.hidden {
+	display:none;	
+}
+
+.unhidden {
+	display:block;	
+}
+
+#lightbox{
+	background-color:rgba(0,0,0,0.2);
+	position:absolute;
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:2;
+}
+
+#victory{
+	position:absolute;
+	top:0px;
+    left:0px;
+	width:100%;
+	height:50%;
+	text-align:center;
+	top:20%;
+	font-size:200%;
+	z-index:2;
+}
+/**** control panel****/
+
+#controlpanel {
+	position:absolute;
+	top:10px;
+	right:10px;
+	z-index:1;
+}
+
+.controls {
+	display:inline-block;
+	padding:6px;
+	width:90px;
+	height:40px;
+	background-color:black;
+	color:white;
+	vertical-align:top;
+	text-align:center;
+	line-height:20px;
+	font-size:0.7em;
+	font-family:"Courier New";
+}
+
+/**** control panel ****/
+
+/**** menu ****/
+
+#menuCont {
+	position:absolute;
+	top:300px;
+	left:0px;
+	width:100%;
+}
+
+#menu {
+	font-size:30px;
+	text-align:center;
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	width:300px;
+	height:500px;
+	background-color:black;
+	z-index:2;
+	padding:30px;
+	border:thick solid white;
+}
+
+.menuButton {
+	display:inline-block;
+	margin:10px;
+	padding:5px;
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:black;
+	color:white;
+	font-family:"Courier New";
+}
+
+/**** menu ****/

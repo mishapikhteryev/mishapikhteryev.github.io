@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>pong</title>
+    <link rel="stylesheet" href="Pong.css">
+	<link rel='icon' href='favicon.ico' type='image/x-icon'/>
+  </head>
+  <body>
+	<div id="header">
+		<h1 id="title">pong</h1>
+		<h2 id="left">score 1: <span id="score1">0</span></h2>
+		<h2 id="middle">first to: <span id="goalScore">3</span></h2>
+		<h2 id="right">score 2: <span id="score2">0</span></h2>
+	</div>
+	
+	<div id="gameboard">
+		<div id="paddle1" class="paddle"></div>
+		<div id="ball"></div>
+		<div id="paddle2" class="paddle"></div>
+	</div>
+	
+	<div id="lightbox" class="hidden"></div>
+	
+	<div id="controlpanel">
+		<button class="controls" onclick="resumeGame()">resume</button>
+		<button class="controls" onclick="pauseGame()">pause</button>
+		<button class="controls" onclick="startGame()">start</button>
+		<button class="controls" onclick="menu()">menu</button>
+	</div>
+	
+	<div id="victory" class="hidden">
+	<h1 id="victoryPanel">&nbsp;</h1>
+	<h2 id="victoryRatio">&nbsp;</h2>
+	</div>
+	
+	<div id="menuCont" class="hidden">
+		<div id="menu">
+			menu
+			<br>
+			<button class="menuButton" onclick="decrementGoal()">-</button>
+			<button class="menuButton" id="goal">first to: 3</button>
+			<button class="menuButton" onclick="incrementGoal()">+</button>
+			<br>
+			<br>
+			<button class="menuButton" onclick="decrementBallBaseSpeed()">-</button>
+			<button class="menuButton" id="bbs">ball base speed: 3</button>
+			<button class="menuButton" onclick="incrementBallBaseSpeed()">+</button>
+			<br>
+			<button class="menuButton" onclick="decrementBallSpeedIncrease()">-</button>
+			<button class="menuButton" id="bsi">ball speed increase: 0.5</button>
+			<button class="menuButton" onclick="incrementBallSpeedIncrease()">+</button>
+			<br>
+			<br>
+			<button class="menuButton" onclick="decrementPaddleSize()">-</button>
+			<button class="menuButton" id="psi">paddle size: 150</button>
+			<button class="menuButton" onclick="incrementPaddleSize()">+</button>
+			<br>
+			<button class="menuButton" onclick="decrementPaddleSpeed()">-</button>
+			<button class="menuButton" id="psp">paddle speed: 10</button>
+			<button class="menuButton" onclick="incrementPaddleSpeed()">+</button>
+			<br>
+			<br>
+			<button class="menuButton" onclick="startGame(),closeMenu()">restart game</button>
+			<br>
+			<button class="menuButton" onclick="closeMenu()">close</button>
+		
+		</div>
+	</div>
+	
+	<script src="Pong.js"></script>
+  </body>
+</html>
